@@ -24,6 +24,11 @@ function Login(props) {
         sendDetailsToServer()
     }
 
+    const handleStViewClick = (e) => {
+        e.preventDefault();
+        window.open("../stuhome.html", "_self");
+    }
+
     const sendDetailsToServer = () => {
         if (state.username.length && state.password.length) {
             // props.showError(null); // showError doesnt exist?? -- Figure out replacement
@@ -75,6 +80,7 @@ function Login(props) {
         <label>Password</label>
         <input type="text" id="password" name="password" value={state.password} placeholder="***********" onChange={handleChange} />
         <input type="submit" value="Submit" onClick={handleSubmitClick}/>
+        <button type="studentview" value="Student View" onClick={handleStViewClick} />
         </form>
         </div>
         </div>
