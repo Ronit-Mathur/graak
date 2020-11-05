@@ -1,8 +1,7 @@
-import React from "react";
-import { Component } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-class StudentHome extends Component {
+class TeacherView extends Component {
   render() {
     return (
       <div>
@@ -19,12 +18,12 @@ class StudentHome extends Component {
           rel="stylesheet"
           type="text/css"
         />
-        <link href="./Styles/style.css" type="text/css" rel="stylesheet" />
+        <link href="Styles/style.css" type="text/css" rel="stylesheet" />
         <nav id="temp">
           {" "}
           {/* Temporary, for dev use only */}
           <Link to="/Login"> Login </Link>
-          <Link to="/StudentView"> Student Home </Link>
+          <Link to="/StudentHome"> Student Home </Link>
           <Link to="/TeacherView">Teacher View</Link>
           <p> this is just for developer's use </p>
         </nav>
@@ -45,23 +44,18 @@ class StudentHome extends Component {
               {" "}
               {/* Student name, current total score */}
               <div className="row justify-content-center">
-                <h1> Student Name </h1>
+                <h1> Teacher Name </h1>
               </div>
               <div className="row justify-content-center">
-                <h2> Current Score: </h2> <h3> #### </h3>
+                <h2> Class Score: </h2> <h3> #### </h3>
               </div>
             </div>
             <div className="col-xs-10 col-md-3 text-center">
               {" "}
               {/* company name */}
-              <img
-                className="icon"
-                src="./Logos/GRAAK-logo-temp.png"
-                alt="Graak Logo"
-              />
+              <img className="icon" src="Logos/GRAAK-logo-temp.png" />
             </div>
           </div>
-          <div className="row"> {/* holds avatar picture */}</div>
         </div>
         <div className="container">
           {" "}
@@ -69,7 +63,7 @@ class StudentHome extends Component {
           <div className="row">
             <div className="col-xs-8 col-sm-6 tile bg-primary">
               {" "}
-              {/* Addition */}
+              {/* Students' Progress */}
               <div className="row">
                 <div className="col">
                   {/* intentionally left blank for formatting */}
@@ -77,18 +71,18 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/add.png" />
+                  <img className="icon" src="Icons/progress.png" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> Addition </h1>
+                  <h1 className="text-light"> Students' Progress </h1>
                 </div>
               </div>
             </div>
             <div className="col-xs-8 col-sm-6 tile bg-primary">
               {" "}
-              {/* Subtration */}
+              {/* Edit Problems */}
               <div className="row">
                 <div className="col">
                   {/* intentionally left blank for formatting */}
@@ -96,12 +90,12 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/subtract.png" />
+                  <img className="icon" src="Icons/pencil.png" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> Subtraction </h1>
+                  <h1 className="text-light"> Edit Problems </h1>
                 </div>
               </div>
             </div>
@@ -109,7 +103,7 @@ class StudentHome extends Component {
           <div className="row">
             <div className="col-xs-8 col-sm-6 tile bg-primary">
               {" "}
-              {/* Matching game */}
+              {/* Create Student */}
               <div className="row">
                 <div className="col">
                   {/* intentionally left blank for formatting */}
@@ -117,18 +111,18 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/search.png" />
+                  <img className="icon" src="Icons/add-person.png" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> Matching </h1>
+                  <h1 className="text-light"> Create Student </h1>
                 </div>
               </div>
             </div>
             <div className="col-xs-8 col-sm-6 tile bg-primary">
               {" "}
-              {/* Avatar and profile */}
+              {/* Profile */}
               <div className="row">
                 <div className="col">
                   {/* intentionally left blank for formatting */}
@@ -136,7 +130,7 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/person-bow.png" />
+                  <img className="icon" src="Icons/person-bow.png" />
                 </div>
               </div>
               <div className="row">
@@ -160,7 +154,7 @@ class StudentHome extends Component {
                 title="Freepik"
               >
                 Freepik
-              </a>
+              </a>{" "}
               from{" "}
               <a href="https://www.flaticon.local/" title="Flaticon">
                 www.flaticon.local
@@ -173,4 +167,4 @@ class StudentHome extends Component {
   }
 }
 
-export default StudentHome;
+export default TeacherView;
