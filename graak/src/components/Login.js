@@ -22,7 +22,7 @@ function Login(props) {
   const handleSubmitClick = (e) => {
     e.preventDefault();
 
-    // sendDetailsToServer();
+    sendDetailsToServer();
   };
 
   const handleStViewClick = (e) => {

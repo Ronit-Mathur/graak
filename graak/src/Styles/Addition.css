@@ -1,0 +1,26 @@
+#app {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#problem {
+  text-align: center;
+  font-size: 72px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: content-box;
+}
+
+#winner {
+  font-size: 72px;
+  color: green;
+}
+
+input {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  color: green;
+}
