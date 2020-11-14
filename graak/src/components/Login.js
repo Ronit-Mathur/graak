@@ -5,6 +5,7 @@ import { Component, useState } from "react";
 import { API_BASE_URL, ACCESS_TOKEN_NAME } from "../Constants/apiConstants";
 import { Link } from "react-router-dom";
 
+// Might have to convert this to a class later on
 function Login(props) {
   const [state, setState] = useState({
     username: "",
@@ -21,7 +22,6 @@ function Login(props) {
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
-
     sendDetailsToServer();
   };
 
@@ -45,16 +45,16 @@ function Login(props) {
               successMessage: "Login successful. Redirecting..",
             }));
             redirectToLogin(); // Change for user page?
-            props.showError(null);
+            //props.showError(null);
           } else {
-            props.showError("An Error Occured");
+            //props.showError("An Error Occured");
           }
         })
         .catch(function (error) {
           console.log(error);
         });
     } else {
-      props.showError("Please enter a valid username and password");
+      //props.showError("Please enter a valid username and password");
     }
   };
 
@@ -92,13 +92,7 @@ function Login(props) {
             placeholder="***********"
             onChange={handleChange}
           />
-          <input type="submit" value="Submit" onClick={handleSubmitClick} />
-          <Link to="/StudentView"> Student Home </Link>
-          <button
-            type="studentview"
-            value="Student View"
-            onClick={handleStViewClick}
-          />
+          <input type="submit" value="Submit-WIP" onClick={handleSubmitClick} />
         </form>
       </div>
     </div>
