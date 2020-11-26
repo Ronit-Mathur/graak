@@ -82,29 +82,7 @@ function Login(props) {
 
   return (
     <div className="Login">
-      <p>Login</p>
-      <div>
-        <label>Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={state.username}
-          placeholder="Username ..."
-          //onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          type="text"
-          id="password"
-          name="password"
-          value={state.password}
-          placeholder="***********"
-          //onChange={handleChange}
-        />
-
-        <Nav />
-      </div>
+      <Nav />
     </div>
   );
 }
