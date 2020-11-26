@@ -1,10 +1,11 @@
 import React from "react";
 import "../Styles/Login.css";
 import axios from "axios";
-import { Component, useState } from "react";
+import { Component, useState, Button } from "react";
 import { API_BASE_URL, ACCESS_TOKEN_NAME } from "../Constants/apiConstants";
 import { Link } from "react-router-dom";
-
+import { useAuth } from "react-use-auth";
+import Nav from "./Nav";
 // Might have to convert this to a class later on
 function Login(props) {
   const [state, setState] = useState({
@@ -69,31 +70,40 @@ function Login(props) {
     props.history.push("/login");
   };
 
+  const Login = () => {
+    const { isAuthenticated, login, logout } = useAuth();
+
+    if (isAuthenticated()) {
+      return <Button onClick={logout}>Logout</Button>;
+    } else {
+      return <Button onClick={login}>Login</Button>;
+    }
+  };
+
   return (
     <div className="Login">
       <p>Login</p>
       <div>
-        <form action="/action_page.php">
-          <label>Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={state.username}
-            placeholder="Username ..."
-            onChange={handleChange}
-          />
-          <label>Password</label>
-          <input
-            type="text"
-            id="password"
-            name="password"
-            value={state.password}
-            placeholder="***********"
-            onChange={handleChange}
-          />
-          <input type="submit" value="Submit-WIP" onClick={handleSubmitClick} />
-        </form>
+        <label>Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value={state.username}
+          placeholder="Username ..."
+          //onChange={handleChange}
+        />
+        <label>Password</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          value={state.password}
+          placeholder="***********"
+          //onChange={handleChange}
+        />
+
+        <Nav />
       </div>
     </div>
   );
