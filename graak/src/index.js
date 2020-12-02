@@ -4,6 +4,7 @@ import "./Styles/index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import Auth0ProviderWithHistory from "./Auth/auth0-provider-with-history";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import ".../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import { AuthProvider } from "react-use-auth";

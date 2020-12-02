@@ -8,6 +8,7 @@ import Addition from "./components/Addition";
 import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 import Auth0CallbackPage from "./Auth/auth0_callback";
 import ProtectedRoute from "./Auth/ProtectedRoute";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
