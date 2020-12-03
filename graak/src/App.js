@@ -5,6 +5,8 @@ import TeacherView from "./components/TeacherView";
 import stuhome from "./components/stuhome";
 import Login from "./components/Login";
 import Addition from "./components/Addition";
+import Subtraction from "./components/Subtraction";
+import NumPlaceGame from "./components/NumPlaceGame";
 import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 import Auth0CallbackPage from "./Auth/auth0_callback";
 import ProtectedRoute from "./Auth/ProtectedRoute";
@@ -18,6 +20,8 @@ function App() {
       <ProtectedRoute path="/StudentView" component={stuhome} />
       <ProtectedRoute path="/TeacherView" component={TeacherView} />
       <ProtectedRoute path="/AdditionGame" component={Addition} />
+      <ProtectedRoute path="/SubtractionGame" component={Subtraction} />
+      <ProtectedRoute path="/DecimalGame" component={NumPlaceGame} />
       <ProtectedRoute path="/auth0_callback" component={Auth0CallbackPage} />
     </div>
   );
