@@ -2,12 +2,13 @@ import React from "react";
 import { Component } from "react";
 import "../Styles/Addition.css";
 
-class Subtraction extends React.Component {
+class Addition_Old extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      num1: 10,
-      num2: 5,
+      num1: 1,
+      num2: 1,
+      problemSet: [0, 1],
       response: "",
       incorrect: false,
       score: 0,
@@ -22,16 +23,11 @@ class Subtraction extends React.Component {
     }
   }
 
-  getProblemSet() {
-      // teacher's problem set from TeacherView -- Database integeration
-
-  }
-
   renderProblem() {
     return (
       <div>
         <div id="problem" className={this.state.incorrect ? "incorrect" : ""}>
-          {this.state.num1} - {this.state.num2}
+          {this.state.num1} + {this.state.num2}
         </div>
         <input
           onKeyPress={this.inputKeyPress}
@@ -83,4 +79,4 @@ class Subtraction extends React.Component {
     });
   };
 }
-export default Subtraction;
+export default Addition_Old;

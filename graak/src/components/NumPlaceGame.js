@@ -1,8 +1,7 @@
 import React from "react";
 import { Component } from "react";
-import "../Styles/Addition.css";
 
-class Addition extends React.Component {
+class NumPlaceGame extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +39,7 @@ class Addition extends React.Component {
   }
 
   renderWin() {
-    const name = "the addition game";
+    const name = "the decimal game";
     return <div>You Win!</div>;
   }
 
@@ -78,4 +77,4 @@ class Addition extends React.Component {
     });
   };
 }
-export default Addition;
+export default NumPlaceGame;
