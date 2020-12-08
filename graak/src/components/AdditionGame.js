@@ -1,33 +1,33 @@
-import React, { Component } from 'react';
-import quizQuestions from './api/placesQuestions';
-import Quiz from './components/Quiz';
-import Result from './components/PlacesResult';
-import './App.css';
+import React, { Component } from "react";
+import quizQuestions from "./api/AdditionQuestions";
+import Quiz from "./components/Quiz";
+import Result from "./components/AdditionResult";
+import "./AdditionGame.css";
 
-class App extends Component {
+class AdditionGame extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       counter: 0,
       questionId: 1,
-      question: '',
+      question: "",
       answerOptions: [],
-      answer: '',
+      answer: "",
       answersCount: {},
-      result: ''
+      result: "",
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
   componentDidMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question =>
+    const shuffledAnswerOptions = quizQuestions.map((question) =>
       this.shuffleArray(question.answers)
     );
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      answerOptions: shuffledAnswerOptions[0],
     });
   }
 
@@ -65,9 +65,9 @@ class App extends Component {
     this.setState((state, props) => ({
       answersCount: {
         ...state.answersCount,
-        [answer]: (state.answersCount[answer] || 0) + 1
+        [answer]: (state.answersCount[answer] || 0) + 1,
       },
-      answer: answer
+      answer: answer,
     }));
   }
 
@@ -80,20 +80,19 @@ class App extends Component {
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
-      answer: ''
+      answer: "",
     });
   }
 
   setResults() {
     const answersCount = this.state.answersCount;
     const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
-    const correctAnswers = answersCount['correct'];
-    if (answersCount['incorrect'] == 10){
+    const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
+    const correctAnswers = answersCount["correct"];
+    if (answersCount["incorrect"] == 10) {
       this.setState({ result: "0" });
-    }
-    else{
-      this.setState({ result: ""+correctAnswers });
+    } else {
+      this.setState({ result: "" + correctAnswers });
     }
   }
 
@@ -117,7 +116,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>&nbsp;&nbsp;return to home page?</p>
+        <h1>ADDITION GAME</h1>
         <div className="App-header">
           <h2>Number Places Game</h2>
         </div>
@@ -127,4 +126,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AdditionGame;

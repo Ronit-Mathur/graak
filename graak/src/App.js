@@ -4,13 +4,13 @@ import LandingPage from "./components/LandingPage";
 import TeacherView from "./components/TeacherView";
 import stuhome from "./components/stuhome";
 import Login from "./components/Login";
-import Addition from "./components/Addition";
+import AdditionGame from "./components/AdditionGame";
 import Subtraction from "./components/Subtraction";
 import NumPlaceGame from "./components/NumPlaceGame";
 import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 import Auth0CallbackPage from "./Auth/auth0_callback";
 import ProtectedRoute from "./Auth/ProtectedRoute";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -19,7 +19,8 @@ function App() {
       <Route path="/Login" component={Login} />
       <ProtectedRoute path="/StudentView" component={stuhome} />
       <ProtectedRoute path="/TeacherView" component={TeacherView} />
-      <ProtectedRoute path="/AdditionGame" component={Addition} />
+      <Route path="/Addition" component={AdditionGame} />
+      <Route path="/AdditionGame" component={AdditionGame} />
       <ProtectedRoute path="/SubtractionGame" component={Subtraction} />
       <ProtectedRoute path="/DecimalGame" component={NumPlaceGame} />
       <ProtectedRoute path="/auth0_callback" component={Auth0CallbackPage} />

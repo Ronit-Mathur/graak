@@ -12,8 +12,11 @@ class LandingPage extends Component {
         <Link to="/Login" className="LndLink">
           Login Page
         </Link>
+        <Link to="/Addition" className="LndLink">
+          Addition
+        </Link>
         <Link to="/AdditionGame" className="LndLink">
-          Addition Game Prototype
+          Addition Game
         </Link>
         <Link to="/TeacherView" className="LndLink">
           Teacher View Template
