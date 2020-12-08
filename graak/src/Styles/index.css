@@ -110,7 +110,7 @@ body {
 
 .radioCustomButton:checked {
   content: '';
-  background: #8bc53f url(./icon-check.svg) no-repeat;
+  background: #8bc53f url(icon-check.svg) no-repeat;
   background-size: 27px;
   border-color: #8bc53f;
 }

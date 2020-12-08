@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import quizQuestions from "../api/additionQuestions";
+import quizQuestions from "../api/placesQuestions";
 import Quiz from "./Quiz";
-import Result from "./AdditionResult";
+import Result from "./PlacesResult";
 import "../Styles/AdditionGame.css";
-import { useAuth } from "react-use-auth";
-const Database = require('better-sqlite3');
 
-class AdditionGame extends Component {
+class PlacesGame extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       counter: 0,
       questionId: 1,
@@ -19,19 +17,10 @@ class AdditionGame extends Component {
       answersCount: {},
       result: "",
     };
-    
+
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
-    const { authResult } = useAuth;
-    const userId = authResult.idToken;
-    
-    const db = new Database('userData.db', { verbose: console.log });
-    
-    db.run("CREATE TABLE IF NOT EXISTS data(userId INTEGER NOT NULL, username TEXT NOT NULL, score INTEGER NOT NULL");
-    const row = db.prepare('SELECT * FROM users WHERE id = ?').get(userId); // user id
-    //console.log(row.id, row.name, row.score);
   }
-  
-  
+
   componentDidMount() {
     const shuffledAnswerOptions = quizQuestions.map((question) =>
       this.shuffleArray(question.answers)
@@ -121,9 +110,6 @@ class AdditionGame extends Component {
   }
 
   renderResult() {
-    console.log("User Gains " + this.state.answersCount + " Points" )
-    //let insertData = db.prepare("INSERT INTO data VALUES(?,?)");
-    
     return <Result quizResult={this.state.result} />;
   }
 
@@ -131,7 +117,7 @@ class AdditionGame extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Addition Game</h2>
+          <h2>Number Places Game</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
@@ -139,4 +125,4 @@ class AdditionGame extends Component {
   }
 }
 
-export default AdditionGame;
+export default PlacesGame;

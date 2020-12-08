@@ -10,11 +10,18 @@
     "auth0-react": "^3.1.0",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
+    "file-uri-to-path": "^2.0.0",
+    "node-pre-gyp": "^0.17.0",
+    "prebuild-install": "^6.0.0",
     "react": "^16.13.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-transition-group": "^4.4.1",
+    "sqlite3": "^5.0.0",
+    "tar": "^6.0.5"
   },
   "scripts": {
     "start": "node ./node_modules/react-scripts/bin/react-scripts.js start",

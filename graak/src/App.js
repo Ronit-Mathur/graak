@@ -11,6 +11,8 @@ import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 import Auth0CallbackPage from "./Auth/auth0_callback";
 import ProtectedRoute from "./Auth/ProtectedRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SubtractionGame from "./components/SubtractionGame";
+import PlacesGame from "./components/PlacesGame";
 
 function App() {
   return (
@@ -19,9 +21,9 @@ function App() {
       <Route path="/Login" component={Login} />
       <ProtectedRoute path="/StudentView" component={stuhome} />
       <ProtectedRoute path="/TeacherView" component={TeacherView} />
-      <Route path="/Addition" component={AdditionGame} />
       <Route path="/AdditionGame" component={AdditionGame} />
-      <ProtectedRoute path="/SubtractionGame" component={Subtraction} />
+      <ProtectedRoute path="/PlacesGame" component={PlacesGame} />
+      <ProtectedRoute path="/SubtractionGame" component={SubtractionGame} />
       <ProtectedRoute path="/DecimalGame" component={NumPlaceGame} />
       <ProtectedRoute path="/auth0_callback" component={Auth0CallbackPage} />
     </div>
