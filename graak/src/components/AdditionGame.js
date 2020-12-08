@@ -4,8 +4,8 @@ import Quiz from "./Quiz";
 import Result from "./AdditionResult";
 import "../Styles/AdditionGame.css";
 import { useAuth } from "react-use-auth";
-const Database = require('better-sqlite3');
-
+//const Database = require('better-sqlite3');
+//const Database = require('sqlite3');
 class AdditionGame extends Component {
   constructor(props) {
     super(props);
@@ -22,12 +22,12 @@ class AdditionGame extends Component {
     
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     const { authResult } = useAuth;
-    const userId = authResult.idToken;
+    //const userId = authResult.idToken;
     
-    const db = new Database('userData.db', { verbose: console.log });
+    //const db = new Database('userData.db', { verbose: console.log });
     
-    db.run("CREATE TABLE IF NOT EXISTS data(userId INTEGER NOT NULL, username TEXT NOT NULL, score INTEGER NOT NULL");
-    const row = db.prepare('SELECT * FROM users WHERE id = ?').get(userId); // user id
+    //db.run("CREATE TABLE IF NOT EXISTS data(userId INTEGER NOT NULL, username TEXT NOT NULL, score INTEGER NOT NULL");
+    //const row = db.prepare('SELECT * FROM users WHERE id = ?').get(userId); // user id
     //console.log(row.id, row.name, row.score);
   }
   
