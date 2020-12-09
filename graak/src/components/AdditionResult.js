@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 function Result(props) {
+  // props.quizResult -> database
   return (
     <ReactCSSTransitionGroup
       className="container result"
@@ -30,7 +31,7 @@ function Result(props) {
         <div>10) 10 + 10 = 20</div>
       </p>
       <div>
-        Play again
+        Click on a game to play again!
       </div>
     </ReactCSSTransitionGroup>
   );

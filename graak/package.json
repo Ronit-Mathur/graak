@@ -10,7 +10,12 @@
     "auth0-react": "^3.1.0",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
     "file-uri-to-path": "^2.0.0",
+    "firebase-admin": "^9.4.1",
+    "jwks-rsa": "^1.12.0",
     "prebuild-install": "^6.0.0",
     "react": "^16.13.1",
     "react-addons-css-transition-group": "^15.6.2",
@@ -23,7 +28,7 @@
   },
   "scripts": {
     "start": "node ./node_modules/react-scripts/bin/react-scripts.js start",
-    "build": "react-scripts build",
+    "build": "node ./node_modules/react-scripts/bin/react-scripts.js build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

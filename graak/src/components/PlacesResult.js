@@ -30,7 +30,7 @@ function Result(props) {
         <div>10) In the number 625, '2' is in the tens place.</div>
       </p>
       <div>
-        Play again
+      Click on a game to play again!
       </div>
     </ReactCSSTransitionGroup>
   );

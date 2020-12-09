@@ -21,7 +21,7 @@ function App() {
       <Route path="/Login" component={Login} />
       <ProtectedRoute path="/StudentView" component={stuhome} />
       <ProtectedRoute path="/TeacherView" component={TeacherView} />
-      <Route path="/AdditionGame" component={AdditionGame} />
+      <ProtectedRoute path="/AdditionGame" component={AdditionGame} />
       <ProtectedRoute path="/PlacesGame" component={PlacesGame} />
       <ProtectedRoute path="/SubtractionGame" component={SubtractionGame} />
       <ProtectedRoute path="/DecimalGame" component={NumPlaceGame} />

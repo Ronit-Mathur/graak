@@ -30,7 +30,7 @@ function Result(props) {
         <div>10) 7 - 6 = 1</div>
       </p>
       <div>
-        Play again
+      Click on a game to play again!
       </div>
     </ReactCSSTransitionGroup>
   );

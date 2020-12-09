@@ -18,6 +18,7 @@ class AdditionGame extends Component {
       answer: "",
       answersCount: {},
       result: "",
+      correctNum: 0,
     };
     
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -100,6 +101,7 @@ class AdditionGame extends Component {
     const answersCountKeys = Object.keys(answersCount);
     const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
     const correctAnswers = answersCount["correct"];
+    this.setState({correctNum: correctAnswers.length });
     if (answersCount["incorrect"] == 10) {
       this.setState({ result: "0" });
     } else {
@@ -121,7 +123,8 @@ class AdditionGame extends Component {
   }
 
   renderResult() {
-    console.log("User Gains " + this.state.answersCount + " Points" )
+    
+    console.log("User Gains " + this.state.correctNum + " Points" ); // answersCount ends
     //let insertData = db.prepare("INSERT INTO data VALUES(?,?)");
     
     return <Result quizResult={this.state.result} />;
