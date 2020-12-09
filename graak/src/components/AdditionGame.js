@@ -4,6 +4,7 @@ import Quiz from "./Quiz";
 import Result from "./AdditionResult";
 import "../Styles/AdditionGame.css";
 import { useAuth } from "react-use-auth";
+import banner from './AddBanner.png';
 //const Database = require('better-sqlite3');
 //const Database = require('sqlite3');
 class AdditionGame extends Component {
@@ -134,7 +135,7 @@ class AdditionGame extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Addition Game</h2>
+          <img src={banner} alt="Add-stronauts Addition Game"></img>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>

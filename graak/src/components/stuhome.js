@@ -1,10 +1,18 @@
 import React from "react";
 import { Component } from "react";
 import { Link, Route, Switch } from "react-router-dom";
+import add from "./Icons/add2.png";
+import sub from "./Icons/sub2.png";
+import search from "./Icons/search2.png";
+import login from "./Icons/login2.png";
+import GRAAK from "./Icons/graak.png";
+
+var score = 0;
 
 class StudentHome extends Component {
   render() {
     return (
+	
       <div>
         {/*  */}
         <meta charSet="utf-8" />
@@ -20,14 +28,7 @@ class StudentHome extends Component {
           type="text/css"
         />
         <link href="./Styles/style.css" type="text/css" rel="stylesheet" />
-        <nav id="temp">
-          {" "}
-          {/* Temporary, for dev use only */}
-          <Link to="/Login"> Login </Link>
-          <Link to="/StudentView"> Student Home </Link>
-          <Link to="/TeacherView">Teacher View</Link>
-          <p> this is just for developer's use </p>
-        </nav>
+        
         <div className="container-fluid">
           {" "}
           {/* For the header content, including logos, names, and avatar */}
@@ -48,16 +49,16 @@ class StudentHome extends Component {
                 <h1> Student Name </h1>
               </div>
               <div className="row justify-content-center">
-                <h2> Current Score: </h2> <h3> #### </h3>
+                <h2> Current Score: </h2> <h3> {score} </h3>
               </div>
             </div>
             <div className="col-xs-10 col-md-3 text-center">
               {" "}
               {/* company name */}
               <img
-                className="icon"
+                className="logo"
                 src="./Logos/GRAAK-logo-temp.png"
-                alt="Graak Logo"
+                alt="GRAAKware"
               />
             </div>
           </div>
@@ -77,12 +78,12 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/add.png" />
+                  <img className="icon" src={add} alt = "+" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> Addition </h1>
+                  <h1 className="text-light"> <Link className = "LndLink" class = "text-light" to = "/AdditionGame"> Add-stronauts </Link> </h1>
                 </div>
               </div>
             </div>
@@ -96,12 +97,12 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/subtract.png" />
+                  <img className="icon" src={sub} alt = "-" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> Subtraction </h1>
+                  <h1 className="text-light"> <Link className = "LndLink" class = "text-light" to = "/SubtractionGame"> Subtract-a-saurus </Link> </h1>
                 </div>
               </div>
             </div>
@@ -109,7 +110,7 @@ class StudentHome extends Component {
           <div className="row">
             <div className="col-xs-8 col-sm-6 tile bg-primary">
               {" "}
-              {/* Matching game */}
+              {/* Decimal game */}
               <div className="row">
                 <div className="col">
                   {/* intentionally left blank for formatting */}
@@ -117,12 +118,12 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/search.png" />
+                  <img className="icon" src={search} alt = "?" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> Matching </h1>
+                  <h1 className="text-light"> <Link className = "LndLink" class = "text-light" to = "/PlacesGame"> Decimal Farm </Link> </h1> 
                 </div>
               </div>
             </div>
@@ -136,12 +137,12 @@ class StudentHome extends Component {
                 <div className="col-3">
                   {" "}
                   {/* Icon */}
-                  <img className="icon" src="./Icons/person-bow.png" />
+                  <img className="icon" src={login} alt = "<<" />
                 </div>
               </div>
               <div className="row">
                 <div className="col">
-                  <h1 className="text-light"> My Profile </h1>
+                  <h1 className="text-light"> <Link className = "LndLink" class = "text-light" to = "/Login"> New Student Login </Link> </h1>
                 </div>
               </div>
             </div>

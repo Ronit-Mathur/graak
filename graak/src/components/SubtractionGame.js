@@ -3,6 +3,7 @@ import quizQuestions from "../api/subtractionQuestions";
 import Quiz from "./Quiz";
 import Result from "./SubtractionResult";
 import "../Styles/AdditionGame.css";
+import banner from './SubBanner.png';
 
 class SubtractionGame extends Component {
   constructor(props) {
@@ -117,7 +118,7 @@ class SubtractionGame extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Subtraction Game</h2>
+         <img src={banner} alt="Subtract-asaurus Subtraction Game"></img>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
